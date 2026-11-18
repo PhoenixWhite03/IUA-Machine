@@ -1,0 +1,256 @@
+/* ==========================================
+   TEMA: SCI-FI HUD (HEADS-UP DISPLAY)
+   ========================================== */
+
+/* --- CONFIGURACIÓN GLOBAL --- */
+QWidget {
+    background-color: #030812; /* Azul espacio profundo / negro cósmico */
+    font-family: 'Segoe UI', 'Consolas', monospace;
+    color: #00e5ff; /* Cian futurista brillante */
+    font-size: 13px;
+}
+
+QMainWindow {
+    background-color: #030812;
+}
+
+/* --- VENTANAS EMERGENTES Y DIÁLOGOS --- */
+QDialog, QMessageBox {
+    background-color: #050d1a;
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+}
+
+QDialog QLabel, QMessageBox QLabel {
+    color: #00e5ff;
+}
+
+/* --- PESTAÑAS (QTabWidget) --- */
+QTabWidget::pane {
+    border: 1px solid #00e5ff;
+    background-color: rgba(5, 13, 26, 200);
+    border-radius: 4px;
+    margin-top: -1px; 
+}
+
+QTabBar::tab {
+    background-color: #081224;
+    color: #4a7a96;
+    padding: 10px 20px; 
+    min-width: 180px;   
+    min-height: 25px;   
+    margin-right: 2px;
+    border: 1px solid #0e294a;
+    border-bottom: none;
+    font-weight: bold;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background-color: #050d1a; 
+    color: #00e5ff; 
+    border-top: 2px solid #ff007f; /* Línea de acento láser magenta/neón */
+    border-left: 1px solid #00e5ff;
+    border-right: 1px solid #00e5ff;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #0d1f3b;
+    color: #00e5ff;
+}
+
+/* --- CAMPOS DE TEXTO Y DESPLEGABLES --- */
+QLineEdit, QComboBox, QSpinBox {
+    background-color: #02050b; 
+    border: 1px solid #0e294a;
+    border-radius: 2px;
+    padding: 6px 10px;  
+    color: #00ff66; /* Verde telemetría militar/espacial */
+    selection-background-color: #ff007f;
+    selection-color: white;
+}
+
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid #00e5ff; 
+    background-color: #050d1a; 
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox QAbstractItemView, QListView {
+    background-color: #050d1a; 
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    selection-background-color: #00e5ff;
+    selection-color: #030812;
+}
+
+/* --- TABLAS (QTableView) --- */
+QTableView {
+    background-color: rgba(2, 5, 11, 230);
+    color: #00e5ff;
+    gridline-color: #0e294a;
+    selection-background-color: #00e5ff;
+    selection-color: #030812;
+    border: 1px solid #0e294a;
+}
+
+QTableView::item {
+    padding: 4px;
+}
+
+QHeaderView::section {
+    background-color: #081224; 
+    color: #00e5ff;
+    border: 1px solid #0e294a;
+    padding: 6px; 
+    font-weight: bold;
+}
+
+/* --- BOTONES BASE --- */
+QPushButton {
+    background-color: #081224; 
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+    border-radius: 2px;  
+    padding: 8px 15px;   
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: rgba(0, 229, 255, 0.2);
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 0, 127, 0.5);
+    color: white;
+    border: 1px solid #ff007f;
+}
+
+QPushButton:disabled {
+    background-color: #030812; 
+    color: #1b365d;
+    border: 1px solid #081224;
+}
+
+/* --- BARRAS DE DESPLAZAMIENTO --- */
+QScrollBar:vertical {
+    border: none;
+    background: #02050b;
+    width: 6px; 
+}
+QScrollBar::handle:vertical {
+    background: #0e294a;
+    min-height: 20px;
+    border-radius: 3px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #00e5ff;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none; 
+}
+QScrollBar:horizontal {
+    border: none;
+    background: #02050b;
+    height: 6px;
+}
+QScrollBar::handle:horizontal {
+    background: #0e294a;
+    min-width: 20px;
+    border-radius: 3px;
+}
+
+/* --- ETIQUETAS GENERALES --- */
+QLabel {
+    font-weight: bold;
+    color: #4a7a96; /* Azul técnico apagado para etiquetas, contrastando con el cian de los datos */
+}
+
+
+/* ==========================================
+   BOTONES CON ESTILOS ESPECÍFICOS (IDs)
+   ========================================== */
+#export-btn {
+    background-color: #0e294a; 
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+}
+#export-btn:hover { background-color: rgba(0, 229, 255, 0.2); }
+#export-btn:pressed { background-color: rgba(0, 229, 255, 0.5); color:white; }
+
+#success-btn {
+    background-color: #003b29; 
+    color: #00ff66;
+    border: 1px solid #00ff66;
+}
+#success-btn:hover { background-color: rgba(0, 255, 102, 0.2); }
+#success-btn:pressed { background-color: rgba(0, 255, 102, 0.5); color:white; }
+
+#danger-btn {
+    background-color: #3b0018; 
+    color: #ff007f;
+    border: 1px solid #ff007f;
+}
+#danger-btn:hover { background-color: rgba(255, 0, 127, 0.2); }
+#danger-btn:pressed { background-color: rgba(255, 0, 127, 0.5); color:white; }
+
+#danger-all-btn { 
+    background-color: #5c001e; 
+    color: #ff3399; 
+    border: 1px solid #ff3399;
+    font-weight: bold; 
+}
+#danger-all-btn:hover { background-color: rgba(255, 51, 153, 0.2); }
+#danger-all-btn:pressed { background-color: rgba(255, 51, 153, 0.5); color:white; }
+
+#warning-btn { 
+    background-color: #3b2e00; 
+    color: #ffbb00; 
+    border: 1px solid #ffbb00;
+    font-weight: bold; 
+}
+#warning-btn:hover { background-color: rgba(255, 187, 0, 0.2); }
+#warning-btn:pressed { background-color: rgba(255, 187, 0, 0.5); color:white; }
+
+#run-batch-btn {
+    padding: 10px; 
+    background-color: #1a003b; 
+    color: #bd00ff;
+    border: 1px solid #bd00ff;
+    font-size: 14px;
+}
+#run-batch-btn:hover { background-color: rgba(189, 0, 255, 0.2); }
+#run-batch-btn:hover { background-color: rgba(189, 0, 255, 0.5); color: white; }
+
+/* Control de inactivos para botones específicos */
+#export-btn:disabled, 
+#success-btn:disabled, 
+#danger-btn:disabled, 
+#danger-all-btn:disabled, 
+#warning-btn:disabled, 
+#run-batch-btn:disabled {
+    background-color: #030812;
+    color: #1b365d;
+    border: 1px solid #081224;
+}
+
+QProgressBar {
+    border: 1px solid #00e5ff; /* Borde neón */
+    background-color: #0a0a0a;
+    text-align: center;
+    color: #00e5ff;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #ff007f;
+    width: 10px; /* Esto hace que la barra se llene en "cuadritos" en vez de ser continua */
+    margin: 1px; /* Separación entre los cuadritos */
+}

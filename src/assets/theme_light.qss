@@ -1,0 +1,253 @@
+/* ==========================================
+   ESTILO GLOBAL MODERN FLAT - CREG IUA
+   ========================================== */
+
+/* --- FONDO PRINCIPAL Y TEXTO --- */
+QWidget {
+    background-color: #f4f5f7;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #15234A; /* Azul oscuro para texto general */
+    font-size: 13px;
+}
+
+QMainWindow {
+    background-color: #f4f5f7;
+}
+
+/* --- PESTAÑAS (QTabWidget) --- */
+QTabWidget::pane {
+    border: 1px solid #BDC4C2;
+    background-color: white;
+    border-radius: 6px;
+    margin-top: -1px; /* Para que la pestaña activa se fusione con el borde de la tarjeta */
+}
+
+/* --- PESTAÑAS (QTabWidget) --- */
+QTabBar::tab {
+    background-color: #eceff1;
+    color: #15234A;
+    
+    /* 1. Ajustamos el espacio interior (Arriba/Abajo 12px, Izquierda/Derecha 25px) */
+    padding: 12px 25px; 
+    
+    /* 2. Forzamos un tamaño mínimo para garantizar que el texto NUNCA se corte */
+    min-width: 180px; 
+    min-height: 25px; 
+    
+    /* 3. El resto de tu configuración visual */
+    margin-right: 2px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #BDC4C2;
+    border-bottom: none;
+    font-weight: bold;
+    font-size: 13px; /* Opcional: Puedes aumentar el texto a 14px si lo deseas */
+}
+
+/* Mantienes tus otros estados igual: */
+QTabBar::tab:selected {
+    background-color: white;
+    color: #0055b8; 
+    border-top: 3px solid #00ae9a; 
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #e0e0e0;
+}
+
+/* --- CAMPOS DE TEXTO Y DESPLEGABLES --- */
+QLineEdit, QComboBox, QSpinBox {
+    background-color: white;
+    border: 1px solid #BDC4C2;
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: #15234A;
+    selection-background-color: #0099dd;
+}
+
+/* Efecto cuando el usuario hace clic para escribir */
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid #0099dd; 
+    background-color: #fbfcff; 
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #BDC4C2;
+    background-color: white;
+    selection-background-color: #78BEED; /* Azul claro secundario al pasar el mouse en la lista */
+}
+
+/* --- BOTONES BASE --- */
+QPushButton {
+    background-color: #0099dd; /* Celeste primario */
+    color: white;
+    border-radius: 4px;
+    padding: 8px 15px; /* Botones más altos y cómodos */
+    font-weight: bold;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #0055DE;
+}
+
+QPushButton:pressed {
+    background-color: hsl(217, 100%, 64%);
+}
+
+QPushButton:disabled {
+    background-color: #BDC4C2; 
+    color: white;
+}
+
+/* --- TABLAS (QTableView) --- */
+QTableView {
+    background-color: white;
+    alternate-background-color: #f4f6f9; /* Color alterno muy suave y moderno */
+    selection-background-color: #78BEED; 
+    selection-color: #15234A;
+    border: 1px solid #BDC4C2;
+    border-radius: 4px;
+    gridline-color: #e0e4e8; /* Líneas internas tenues */
+}
+
+QHeaderView::section {
+    background-color: #15234A; /* Azul marino para encabezados fuertes */
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+    border: none;
+    border-right: 1px solid #384792; 
+}
+
+QTableView::item {
+    padding: 4px;
+}
+
+/* --- BARRAS DE DESPLAZAMIENTO MINIMALISTAS --- */
+QScrollBar:vertical {
+    border: none;
+    background: #f4f5f7;
+    width: 8px; /* Más delgada */
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #BDC4C2;
+    min-height: 20px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #0099dd;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none; /* Elimina las flechas de arriba y abajo */
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #f4f5f7;
+    height: 8px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #BDC4C2;
+    min-width: 20px;
+    border-radius: 4px;
+}
+
+/* --- ETIQUETAS (Labels) --- */
+QLabel {
+    font-weight: bold;
+    color: #384792;
+}
+
+/* ==========================================
+   BOTONES CON ESTILOS ESPECÍFICOS (IDs)
+   ========================================== */
+
+#export-btn {
+    background-color: #384792; 
+}
+#export-btn:hover { background-color: #453791; }
+#export-btn:pressed { background-color: hsl(249, 45%, 59%); }
+
+#success-btn {
+    background-color: #00ae9a; 
+}
+#success-btn:hover { background-color: #0089AD; }
+#success-btn:pressed { background-color: hsl(192, 100%, 54%); }
+
+#danger-btn {
+    background-color: #E61D59;
+}
+#danger-btn:hover { background-color: #E62F1E; }
+#danger-btn:pressed { background-color: hsl(5, 80%, 71%); }
+
+#run-batch-btn {
+    padding: 10px;
+    background-color: #0055b8;
+    font-size: 14px;
+}
+#run-batch-btn:hover { background-color: #001CB8; }
+#run-batch-btn:pressed { background-color: hsl(231, 100%, 56%); }
+
+/* NUEVO: Botón de Copiar TODOS (Mostaza/Naranja de la marca) */
+#warning-btn { 
+    background-color: #E3B32C; 
+    color: #15234A; /* Letra azul oscura para máximo contraste y legibilidad */
+    font-weight: bold;
+}
+#warning-btn:hover { 
+    background-color: #E39C2B; /* Amarillo brillante de la marca al pasar el mouse */
+}
+#warning-btn:pressed {
+    background-color: hsl(37, 77%, 73%);
+}
+
+/* NUEVO: Botón de Liberar TODOS (Un rojo más oscuro que el normal) */
+#danger-all-btn { 
+    background-color: #b31645; 
+    color: white;
+    font-weight: bold;
+}
+#danger-all-btn:hover { 
+    background-color: #B32315; 
+}
+#danger-all-btn:pressed {
+    background-color: hsl(5, 79%, 59%);
+}
+
+/* No olvides añadir los nuevos IDs a la regla de botones inactivos al final del archivo */
+#export-btn:disabled, 
+#success-btn:disabled, 
+#danger-btn:disabled, 
+#danger-all-btn:disabled,   /* <-- Añadido */
+#warning-btn:disabled,      /* <-- Añadido */
+#run-batch-btn:disabled {
+    background-color: #BDC4C2;
+    color: #f4f5f7; /* En el dark theme. En el light theme pon color: white; */
+}
+
+QProgressBar {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    text-align: center;
+    color: #15234A; /* Azul oscuro para que el porcentaje se lea bien */
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #0099dd; /* Color primario (Celeste/Azul) */
+    border-radius: 5px;
+}

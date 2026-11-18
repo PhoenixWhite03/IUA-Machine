@@ -1,0 +1,246 @@
+/* ==========================================
+   TEMA: TERMINAL / HACKER (CLI UI)
+   ========================================== */
+
+/* --- CONFIGURACIÓN GLOBAL --- */
+QWidget {
+    background-color: #0b0f19; /* Fondo negro-azulado oscuro de consola */
+    font-family: 'Consolas', 'Courier New', monospace; /* Tipografía estilo terminal */
+    color: #00ffcc; /* Verde neón/cian clásico de hacker */
+    font-size: 13px;
+}
+
+QMainWindow {
+    background-color: #0b0f19;
+}
+
+/* --- VENTANAS EMERGENTES Y DIÁLOGOS --- */
+QDialog, QMessageBox {
+    background-color: #0b0f19;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+}
+
+QDialog QLabel, QMessageBox QLabel {
+    color: #00ffcc;
+}
+
+/* --- PESTAÑAS (QTabWidget) --- */
+QTabWidget::pane {
+    border: 1px solid #00ffcc;
+    background-color: #0d1117;
+    border-radius: 0px; /* Estilo cuadrado de consola */
+    margin-top: -1px; 
+}
+
+QTabBar::tab {
+    background-color: #161b22;
+    color: #8b949e;
+    padding: 10px 20px; 
+    min-width: 180px;   
+    min-height: 25px;   
+    margin-right: 2px;
+    border: 1px solid #30363d;
+    border-bottom: none;
+    font-weight: bold;
+}
+
+QTabBar::tab:selected {
+    background-color: #0d1117; 
+    color: #00ffcc; 
+    border-top: 2px solid #00ffcc; /* Indicador brillante */
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #21262d;
+    color: #00ffcc;
+}
+
+/* --- CAMPOS DE TEXTO Y DESPLEGABLES --- */
+QLineEdit, QComboBox, QSpinBox {
+    background-color: #010409; 
+    border: 1px solid #30363d;
+    border-radius: 2px;
+    padding: 6px 10px;  
+    color: #58a6ff; /* Azul terminal para los inputs */
+    selection-background-color: #00ffcc;
+    selection-color: #0b0f19;
+}
+
+QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+    border: 1px solid #00ffcc; /* Resalta en cian brillante al escribir */
+    background-color: #0d1117; 
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox QAbstractItemView, QListView {
+    background-color: #010409; 
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    selection-background-color: #00ffcc;
+    selection-color: #0b0f19;
+}
+
+/* --- TABLAS (QTableView) --- */
+QTableView {
+    background-color: #010409;
+    color: #00ffcc;
+    gridline-color: #21262d;
+    selection-background-color: #1f6feb;
+    selection-color: white;
+    border: 1px solid #30363d;
+}
+
+QTableView::item {
+    padding: 4px;
+}
+
+QHeaderView::section {
+    background-color: #161b22; 
+    color: #00ffcc;
+    border: 1px solid #30363d;
+    padding: 6px; 
+    font-weight: bold;
+}
+
+/* --- BOTONES BASE --- */
+QPushButton {
+    background-color: #21262d; 
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 2px;  
+    padding: 8px 15px;   
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #30363d; 
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+}
+
+QPushButton:pressed {
+    background-color: hsl(212, 12%, 1%);
+    color: white;
+}
+
+QPushButton:disabled {
+    background-color: #161b22; 
+    color: #484f58;
+    border: 1px solid #21262d;
+}
+
+/* --- BARRAS DE DESPLAZAMIENTO --- */
+QScrollBar:vertical {
+    border: none;
+    background: #010409;
+    width: 8px; 
+}
+QScrollBar::handle:vertical {
+    background: #30363d;
+    min-height: 20px;
+    border-radius: 2px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #00ffcc;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    border: none;
+    background: none; 
+}
+QScrollBar:horizontal {
+    border: none;
+    background: #010409;
+    height: 8px;
+}
+QScrollBar::handle:horizontal {
+    background: #30363d;
+    min-width: 20px;
+    border-radius: 2px;
+}
+
+/* --- ETIQUETAS GENERALES --- */
+QLabel {
+    font-weight: bold;
+    color: #8b949e; /* Gris técnico para etiquetas descriptivas */
+}
+
+/* ==========================================
+   BOTONES CON ESTILOS ESPECÍFICOS (IDs)
+   ========================================== */
+#export-btn {
+    background-color: #21262d; 
+    color: white;
+}
+#export-btn:hover { background-color: #30363d; }
+#export-btn:pressed { background-color: hsl(215, 98%, 11%); }
+
+#success-btn {
+    background-color: #21262d; /* Verde terminal de éxito */
+    color: white;
+}
+#success-btn:hover { background-color: #30363d; }
+#success-btn:pressed { background-color: hsl(131, 55%, 10%); }
+
+#danger-btn {
+    background-color: #21262d; /* Rojo de alerta terminal */
+    color: white;
+}
+#danger-btn:hover { background-color: #30363d; }
+#danger-btn:pressed { background-color: hsl(3, 93%, 13%); }
+
+#danger-all-btn { 
+    background-color: #21262d; 
+    color: white; 
+    font-weight: bold; 
+}
+#danger-all-btn:hover { background-color: #30363d; }
+#danger-all-btn:pressed { background-color: hsl(1, 69%, 13%); }
+
+#warning-btn { 
+    background-color: #21262d; /* Amarillo consola */
+    color: white; 
+    font-weight: bold; 
+}
+#warning-btn:hover { background-color: #30363d; }
+#warning-btn:pressed { background-color: hsl(40, 91%, 18%); }
+
+#run-batch-btn {
+    padding: 10px; 
+    background-color: #21262d; /* Púrpura hacker */
+    color: white;
+    font-size: 14px;
+}
+#run-batch-btn:hover { background-color: #30363d; }
+#run-batch-btn:pressed { background-color: hsl(261, 73%, 12%); }
+
+/* Control de inactivos para botones específicos */
+#export-btn:disabled, 
+#success-btn:disabled, 
+#danger-btn:disabled, 
+#danger-all-btn:disabled, 
+#warning-btn:disabled, 
+#run-batch-btn:disabled {
+    background-color: #161b22;
+    color: #484f58;
+    border: 1px solid #21262d;
+}
+
+QProgressBar {
+    border: 1px solid #00ffcc; /* Borde neón */
+    background-color: #0a0a0a;
+    text-align: center;
+    color: #00ffcc;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+QProgressBar::chunk {
+    background-color: #00ffcc;
+    width: 10px; /* Esto hace que la barra se llene en "cuadritos" en vez de ser continua */
+    margin: 1px; /* Separación entre los cuadritos */
+}
