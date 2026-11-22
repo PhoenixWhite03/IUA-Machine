@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 import ctypes
 import pandas as pd
 from PyQt5.QtWidgets import (

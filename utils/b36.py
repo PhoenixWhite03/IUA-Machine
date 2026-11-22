@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 class Base36:
     ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 

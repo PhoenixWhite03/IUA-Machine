@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 from PyQt5.QtWidgets import QLineEdit, QTableWidget, QMessageBox, QTableWidgetItem, QComboBox, QPushButton, QHeaderView
 from PyQt5.QtCore import Qt
 from datetime import datetime

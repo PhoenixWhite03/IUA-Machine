@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 from PyQt5.QtCore import QThread, pyqtSignal
 import pandas as pd
 

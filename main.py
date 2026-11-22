@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 import sys
 from PyQt5.QtWidgets import QApplication
 from lib.paths import DATA_PATH, get_saved_theme

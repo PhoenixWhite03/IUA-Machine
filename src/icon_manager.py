@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 import os
 from typing import Dict, Optional
 from PyQt5.QtGui import QIcon, QPixmap, QPainter, QColor

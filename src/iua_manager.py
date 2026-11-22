@@ -1,4 +1,3 @@
-# © 2026 David Ali Caballero Pérez. All rights reserved.
 import pandas as pd
 import numpy as np
 import threading
